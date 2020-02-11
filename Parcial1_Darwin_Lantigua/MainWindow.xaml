@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial1_Darwin_Lantigua"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registro de Articulos" Height="450" Width="450">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="116*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="ArtículoID" Grid.Column="1" HorizontalAlignment="Center" Height="37" Grid.Row="1" VerticalAlignment="Center" Width="100"/>
+        <Label Content="Descripción" Grid.Column="1" HorizontalAlignment="Center" Height="25" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Existencia" Grid.Column="1" HorizontalAlignment="Center" Height="32" Grid.Row="3" VerticalAlignment="Center" Width="100"/>
+        <Label Content="Costo" Grid.Column="1" HorizontalAlignment="Center" Height="42" Grid.Row="4" VerticalAlignment="Center" Width="100"/>
+        <Label Content="Valor inventario" Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,5,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="ArticuloIdTextBox" Grid.Column="2" HorizontalAlignment="Center" Height="37" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="99"/>
+        <TextBox x:Name="DescripcionTextBox" Grid.Column="2" HorizontalAlignment="Center" Height="25" Margin="0,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
+        <TextBox x:Name="ExistenciaTextBox" Grid.Column="2" HorizontalAlignment="Center" Height="32" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="99" TextChanged="ExistenciaTextBox_TextChanged" Text="0"/>
+        <TextBox x:Name="CostoTextBox" Grid.Column="2" HorizontalAlignment="Center" Height="22" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="99" TextChanged="CostoTextBox_TextChanged" Text="0"/>
+        <TextBox x:Name="ValorInventiarioTextBox" Grid.Column="2" HorizontalAlignment="Center" Height="37" Margin="0,5,0,0" Grid.Row="5"  TextWrapping="Wrap" VerticalAlignment="Top" Width="99" Text="0" IsEnabled="False"/>
+        <Button x:Name="BuscarButton" Content="Buscar" Grid.Column="3" HorizontalAlignment="Center" Height="37" Grid.Row="1" VerticalAlignment="Center" Width="96" Click="BuscarButton_Click"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="83" Click="NuevoButton_Click"/>
+        <Button x:Name="GuardarButton" Content="Guardar" Grid.Column="2" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="89" Click="GuardarButton_Click"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" Grid.Column="3" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="80" Click="EliminarButton_Click"/>
+        <Button x:Name="ConsultarButton" Content="Consultar" Grid.Column="2" HorizontalAlignment="Center" Height="39" Margin="0,70,0,0" Grid.Row="6" VerticalAlignment="Top" Width="99" Click="ConsultarButton_Click"/>
 
     </Grid>
 </Window>
